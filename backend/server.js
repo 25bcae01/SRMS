@@ -9,6 +9,10 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+app.get("/", (req, res) => {
+  res.send("SRMS API is running");
+});
+
 // Database Connection
 const db = mysql.createConnection({
   host: process.env.DB_HOST,
