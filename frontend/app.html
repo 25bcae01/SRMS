@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Student Management System</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="navbar">
+      <a href="index.html">Home</a>
+      <a href="app.html">Application</a>
+      <a href="about.html">About</a>
+      <a href="terms.html">Terms</a>
+    </div>
+    <div class="container">
+      <h1>Student Record Management System</h1>
+
+      <!-- Add Student -->
+      <div class="card">
+        <h3>Add Student</h3>
+
+        <input type="text" id="name" placeholder="Student Name" />
+        <input type="text" id="course" placeholder="Course" />
+        <input type="number" id="marks" placeholder="Marks (0-600)" />
+
+        <button onclick="addStudent()">Add Student</button>
+      </div>
+
+      <!-- Student List -->
+      <div class="card">
+        <h3>Student List</h3>
+
+        <button onclick="getStudents()">Refresh List</button>
+
+        <table id="studentTable">
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Course</th>
+            <th>Marks</th>
+            <th>Actions</th>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
